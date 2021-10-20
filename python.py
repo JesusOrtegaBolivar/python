@@ -129,3 +129,50 @@
 # for i in range(1, 10 + 1):
 #     print(numero * i)
 #     i = i + i
+
+
+# print("conjetura de collatz")
+# numero = int(input("Introduce un numero: "))
+# while(numero != 1):
+#     if (numero%2 == 0):
+#         numero = numero / 2
+#     else:
+#         numero = numero * 3 + 1
+#     print(numero)
+
+# respuesta = "s"
+# while(respuesta == "s"):
+#     numero = int(input("Introduce un numero: "))
+#     if(numero > 0):
+#         print("el numero " + str(numero) + " es positivo")
+#     elif(numero < 0):
+#         print("el numero " + str(numero) + " es negativo")
+#     else:
+#         print("El numero es 0")
+#     respuesta = input("¿Desea continuar? s/n: ")
+# print("El programa ha terminado")
+
+
+# while(True):
+#     numero = int(input("Introduce un numero: "))
+#     if(numero > 0):
+#          print("el numero " + str(numero) + " es positivo")
+#     elif(numero < 0):
+#          print("el numero " + str(numero) + " es negativo")
+#     else:
+#          print("El numero es 0")
+#     respuesta = input("¿Desea continuar? s/n: ")
+#     if(respuesta == "n"):
+#         print("El programa ha terminado")
+#         break
+
+
+
+
+texto = "Primer python"
+print("Mayusculas: " + texto.upper())
+print("Replace: " + texto.replace("o", "@"))
+print("Primera letra: " + texto[0])
+print("Longitud texto: " + str(len(texto)))
+print("Buscar letra P: " + str(texto.find("P")))
+print("Buscar siguiente letra p: " + str(texto.find("p", 0)))
