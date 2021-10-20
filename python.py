@@ -190,10 +190,20 @@
 # else:
 #     print("no es un numero")
 
+
+
+
 email = input("Introduce tu email para la comprobacion: ")
-posicion = email.rfind(".")
-dominio = (email[posicion:])
-arroba = ((email.find("@", email.find("@") + 1)))
+dominio = (email[email.rfind("."):])
+numerosarroba = ((email.find("@", email.find("@") + 1)))
+arroba = email.find("@")
+punto = email.find(".")
+inicioyfinal = email.startswith("@") + email.startswith(".") + email.endswith(".") + email.endswith("@")
+if((arroba != 1) and (punto != 1) and (inicioyfinal == 0) and (len(dominio) >= 2) and (len(dominio) < 5) and (numerosarroba == -1)       ):
+    print("Correo Valido")
+else:
+    print("correo no valido")
+
 if((email.find("@")) != -1):
     if((email.find(".")) != -1):
         if(email.startswith("@") == False) and (email.startswith(".") == False) and (email.endswith(".") == False) and (email.endswith("@") == False) :
