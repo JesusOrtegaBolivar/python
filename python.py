@@ -46,39 +46,39 @@
 # print(ceil(resultado))
 
 
-from math import trunc
-dia = int(input("Introduce tu dia de nacimiento: "))
-mes = int(input("Introduce tu mes de nacimiento: "))
-año = int(input("Introduce tu año de nacimiento: "))
+# from math import trunc
+# dia = int(input("Introduce tu dia de nacimiento: "))
+# mes = int(input("Introduce tu mes de nacimiento: "))
+# año = int(input("Introduce tu año de nacimiento: "))
 
-if(mes == 1):
-    mes = 13
-    año = año - 1
-if(mes == 2):
-    mes = 14
-    año = año - 1
+# if(mes == 1):
+#     mes = 13
+#     año = año - 1
+# if(mes == 2):
+#     mes = 14
+#     año = año - 1
 
-operacion1 = trunc(((mes + 1)*3)/5)
-operacion2 = trunc(año / 4)
-operacion3 = trunc(año / 100)
-operacion4 = trunc(año / 400)
-operacion5 = trunc(dia + (mes * 2) + año + operacion1 + operacion2 - operacion3 + operacion4 + 2)
-operacion6 = trunc(operacion5 / 7)
-resultado = trunc(operacion5 - (operacion6 * 7))
+# operacion1 = trunc(((mes + 1)*3)/5)
+# operacion2 = trunc(año / 4)
+# operacion3 = trunc(año / 100)
+# operacion4 = trunc(año / 400)
+# operacion5 = trunc(dia + (mes * 2) + año + operacion1 + operacion2 - operacion3 + operacion4 + 2)
+# operacion6 = trunc(operacion5 / 7)
+# resultado = trunc(operacion5 - (operacion6 * 7))
 
-if(resultado == 0):
-    print("Sabado")
-elif(resultado == 1):
-    print("domingo")
-elif(resultado == 2):
-    print("Lunes")
-elif(resultado == 3):
-    print("Martes")
-elif(resultado == 4):
-    print("Miercoles")
-elif(resultado == 5):
-    print("Jueves")
-elif(resultado == 6):
-    print("Viernes")
-else:
-    print("Ha ocurrido un error")
+# if(resultado == 0):
+#     print("Sabado")
+# elif(resultado == 1):
+#     print("domingo")
+# elif(resultado == 2):
+#     print("Lunes")
+# elif(resultado == 3):
+#     print("Martes")
+# elif(resultado == 4):
+#     print("Miercoles")
+# elif(resultado == 5):
+#     print("Jueves")
+# elif(resultado == 6):
+#     print("Viernes")
+# else:
+#     print("Ha ocurrido un error")
