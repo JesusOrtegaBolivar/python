@@ -194,12 +194,19 @@ email = input("Introduce tu email para la comprobacion: ")
 posicion = email.rfind(".")
 dominio = (email[posicion:])
 arroba = ((email.find("@", email.find("@") + 1)))
-print(arroba)
 if((email.find("@")) != -1):
     if((email.find(".")) != -1):
         if(email.startswith("@") == False) and (email.startswith(".") == False) and (email.endswith(".") == False) and (email.endswith("@") == False) :
             if(len(dominio) >= 2) and (len(dominio) < 5):
-                if(arroba == -1):
+                if(arroba != -1):
+                    print("el correo es invalido")
+                else:
                     print("el correo es valido")
+            else:
+                print("el correo es invalido")
+        else:
+            print("el correo es invalido")
+    else:
+        print("el correo es invalido")
 else:
     print("El email no es valido")
