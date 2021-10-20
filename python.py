@@ -83,35 +83,49 @@
 # else:
 #     print("Ha ocurrido un error")
 
-numero1 = 0
-numero2 = 0
-numero3 = 0
-suma = 0
-print("Introduce tres numeros: ")
-numero1 = int(input())
-numero2 = int(input())
-numero3 = int(input())
+# numero1 = 0
+# numero2 = 0
+# numero3 = 0
+# suma = 0
+# print("Introduce tres numeros: ")
+# numero1 = int(input())
+# numero2 = int(input())
+# numero3 = int(input())
 
-if(numero1 > numero2 and numero1 > numero3):
-    print("El numero mayor es: " + str(numero1))
-elif(numero2 > numero1 and numero2 > numero3):
-    print("El numero mayor es: " + str(numero2))
-else:
-    print("El numero mayor es: " + str(numero3))
+# if(numero1 > numero2 and numero1 > numero3):
+#     print("El numero mayor es: " + str(numero1))
+# elif(numero2 > numero1 and numero2 > numero3):
+#     print("El numero mayor es: " + str(numero2))
+# else:
+#     print("El numero mayor es: " + str(numero3))
 
-if(numero1 < numero2 and numero1 < numero3):
-    print("El numero menor es: " + str(numero1))
-elif(numero2 < numero1 and numero2 < numero3):
-    print("El numero menor es: " + str(numero2))
-else:
-    print("El numero menor es: " + str(numero3))
+# if(numero1 < numero2 and numero1 < numero3):
+#     print("El numero menor es: " + str(numero1))
+# elif(numero2 < numero1 and numero2 < numero3):
+#     print("El numero menor es: " + str(numero2))
+# else:
+#     print("El numero menor es: " + str(numero3))
 
-if(numero1 > numero2 and numero1 < numero3 or numero1 < numero2 and numero1 > numero3):
-    print("El numero intermedio es: " + str(numero1))
-elif(numero2 > numero1 and numero2 < numero3 or numero2 < numero1 and numero1 > numero3):
-    print("El numero intermedio es: " + str(numero2))
-else:
-    print("El numero intermedio es: " +str(numero3))
+# if(numero1 > numero2 and numero1 < numero3 or numero1 < numero2 and numero1 > numero3):
+#     print("El numero intermedio es: " + str(numero1))
+# elif(numero2 > numero1 and numero2 < numero3 or numero2 < numero1 and numero1 > numero3):
+#     print("El numero intermedio es: " + str(numero2))
+# else:
+#     print("El numero intermedio es: " +str(numero3))
 
-suma = numero1 + numero2 + numero3
-print("la suma de todos los numeros es: " + str(suma))
+# suma = numero1 + numero2 + numero3
+# print("la suma de todos los numeros es: " + str(suma))
+
+
+# inicial = int(input("Introduce un numero inicial: "))
+# fin = int(input("Introduce el numero final: "))
+# for i in range(inicial, fin + 1):
+#     if(i % 2 == 0):
+#         print("numero par: " + str(i))
+#     else:
+#         print("numero impar: " + str(i))
+
+# numero = int(input("introduce un numero: "))
+# for i in range(1, 10 + 1):
+#     print(numero * i)
+#     i = i + i
