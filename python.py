@@ -167,12 +167,39 @@
 #         break
 
 
+# texto = "Primer python"
+# print("Mayusculas: " + texto.upper())
+# print("Replace: " + texto.replace("o", "@"))
+# print("Primera letra: " + texto[0])
+# print("Longitud texto: " + str(len(texto)))
+# print("Buscar letra P: " + str(texto.find("P")))
+# print("Buscar siguiente letra p: " + str(texto.find("p", 0)))
+# print("Letra p con RFING: " + str(texto.rfind("p")))
+# print("Texto iniciando con A: " + str(texto.startswith("A")))
+# print("Texto finalizando con n: " + str(texto.endswith("n")))
+# print("Texto numeros: " + str(texto.isdigit()))
+# print("Texto letras: " + str(texto.isalpha()))
+# longitud = len(texto)
+# for i in range(longitud):
+#     letra = texto[i]
+#     print(str(i) + ": " + letra)
 
+# aux = input("Introduce un numero o una letra: ")
+# if(aux.isdigit()):
+#     print("es un numero")
+# else:
+#     print("no es un numero")
 
-texto = "Primer python"
-print("Mayusculas: " + texto.upper())
-print("Replace: " + texto.replace("o", "@"))
-print("Primera letra: " + texto[0])
-print("Longitud texto: " + str(len(texto)))
-print("Buscar letra P: " + str(texto.find("P")))
-print("Buscar siguiente letra p: " + str(texto.find("p", 0)))
+email = input("Introduce tu email para la comprobacion: ")
+posicion = email.rfind(".")
+dominio = (email[posicion:])
+arroba = ((email.find("@", email.find("@") + 1)))
+print(arroba)
+if((email.find("@")) != -1):
+    if((email.find(".")) != -1):
+        if(email.startswith("@") == False) and (email.startswith(".") == False) and (email.endswith(".") == False) and (email.endswith("@") == False) :
+            if(len(dominio) >= 2) and (len(dominio) < 5):
+                if(arroba == -1):
+                    print("el correo es valido")
+else:
+    print("El email no es valido")
