@@ -278,57 +278,57 @@
 # despedida(nombre, fecha)
 
 
-from metodosexternos import *    
+# from metodosexternos import *    
 
-print("Introduce dos numeros por favor: ")
-numero1 = pedirnumero1()
-numero2 = pedirnumero2()
-valor = -1
-while(valor != 0):
-    valor = int(mostrarMenu())
-    if(valor == 1):
-        resultado = sumar(numero1, numero2)
-        print("El resultado es: " + str(resultado))
-        print("¿Quieres introducir nuevos numeros (s/n)?: ")
-        opcion = input()
-        if(opcion == "s"):
-            print("Introduce dos numeros por favor: ")
-            numero1 = pedirnumero1()
-            numero2 = pedirnumero2()
-        else:
-            print("continuará con los mismo numeros")
-    elif(valor == 2):
-        resultado = restar(numero1, numero2)
-        print("El resultado es: " + str(resultado))
-        print("¿Quieres introducir nuevos numeros (s/n)?: ")
-        opcion = input()
-        if(opcion == "s"):
-            print("Introduce dos numeros por favor: ")
-            numero1 = pedirnumero1()
-            numero2 = pedirnumero2()
-        else:
-            print("continuará con los mismo numeros")
-    elif(valor == 3):
-        resultado = multiplicar(numero1, numero2)
-        print("El resultado es: " + str(resultado))
-        print("¿Quieres introducir nuevos numeros (s/n)?: ")
-        opcion = input()
-        if(opcion == "s"):
-            print("Introduce dos numeros por favor: ")
-            numero1 = pedirnumero1()
-            numero2 = pedirnumero2()
-        else:
-            print("continuará con los mismo numeros")
-    elif(valor == 4):
-        resultado = dividir(numero1, numero2)
-        print("El resultado es: " + str(resultado))
-        print("¿Quieres introducir nuevos numeros (s/n)?: ")
-        opcion = input()
-        if(opcion == "s"):
-            print("Introduce dos numeros por favor: ")
-            numero1 = pedirnumero1()
-            numero2 = pedirnumero2()
-        else:
-            print("continuará con los mismo numeros")
-    else:
-        print("Saliendo del programa...")
+# print("Introduce dos numeros por favor: ")
+# numero1 = pedirnumero1()
+# numero2 = pedirnumero2()
+# valor = -1
+# while(valor != 0):
+#     valor = int(mostrarMenu())
+#     if(valor == 1):
+#         resultado = sumar(numero1, numero2)
+#         print("El resultado es: " + str(resultado))
+#         print("¿Quieres introducir nuevos numeros (s/n)?: ")
+#         opcion = input()
+#         if(opcion == "s"):
+#             print("Introduce dos numeros por favor: ")
+#             numero1 = pedirnumero1()
+#             numero2 = pedirnumero2()
+#         else:
+#             print("continuará con los mismo numeros")
+#     elif(valor == 2):
+#         resultado = restar(numero1, numero2)
+#         print("El resultado es: " + str(resultado))
+#         print("¿Quieres introducir nuevos numeros (s/n)?: ")
+#         opcion = input()
+#         if(opcion == "s"):
+#             print("Introduce dos numeros por favor: ")
+#             numero1 = pedirnumero1()
+#             numero2 = pedirnumero2()
+#         else:
+#             print("continuará con los mismo numeros")
+#     elif(valor == 3):
+#         resultado = multiplicar(numero1, numero2)
+#         print("El resultado es: " + str(resultado))
+#         print("¿Quieres introducir nuevos numeros (s/n)?: ")
+#         opcion = input()
+#         if(opcion == "s"):
+#             print("Introduce dos numeros por favor: ")
+#             numero1 = pedirnumero1()
+#             numero2 = pedirnumero2()
+#         else:
+#             print("continuará con los mismo numeros")
+#     elif(valor == 4):
+#         resultado = dividir(numero1, numero2)
+#         print("El resultado es: " + str(resultado))
+#         print("¿Quieres introducir nuevos numeros (s/n)?: ")
+#         opcion = input()
+#         if(opcion == "s"):
+#             print("Introduce dos numeros por favor: ")
+#             numero1 = pedirnumero1()
+#             numero2 = pedirnumero2()
+#         else:
+#             print("continuará con los mismo numeros")
+#     else:
+#         print("Saliendo del programa...")
