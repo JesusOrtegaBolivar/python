@@ -191,32 +191,144 @@
 #     print("no es un numero")
 
 
+# email = input("Introduce tu email para la comprobacion: ")
+# dominio = (email[email.rfind("."):])
+# numerosarroba = ((email.find("@", email.find("@") + 1)))
+# arroba = email.find("@")
+# punto = email.find(".")
+# inicioyfinal = email.startswith("@") + email.startswith(".") + email.endswith(".") + email.endswith("@")
+# if((arroba != 1) and (punto != 1) and (inicioyfinal == 0) and (len(dominio) >= 2) and (len(dominio) < 5) and (numerosarroba == -1)       ):
+#     print("Correo Valido")
+# else:
+#     print("correo no valido")
+
+# print("Introduzca su email: ")
+# email = input()
+# if(email.find("@") == -1):
+#     print("Email sin @")
+# elif(email.find(".") == -1):
+#     print("Email sin punto")
+# elif(email.startswith("@") or email.endswith("@")):
+#     print("Email iniciado o acabado con @")
+# elif(email.startswith(".") or email.endswith(".")):
+#     print("Email iniciado o acabado con .")
+# elif((email.find("@") != email.rfind("@"))):
+#     print("Email con mas de 1 @")
+# elif(email.find("@") > email.rfind(".")):
+#     print("Se necesita un punto desde de @")
+# else:
+#     ultimopunto = email.rfind(".")
+#     dominio = email[ultimopunto+1:]
+#     longitud = len(dominio)
+#     if(longitud >= 2 and longitud <= 4):
+#         print("Email Correcto")
+#     else:
+#         print("Dominio incorrecto")
 
 
-email = input("Introduce tu email para la comprobacion: ")
-dominio = (email[email.rfind("."):])
-numerosarroba = ((email.find("@", email.find("@") + 1)))
-arroba = email.find("@")
-punto = email.find(".")
-inicioyfinal = email.startswith("@") + email.startswith(".") + email.endswith(".") + email.endswith("@")
-if((arroba != 1) and (punto != 1) and (inicioyfinal == 0) and (len(dominio) >= 2) and (len(dominio) < 5) and (numerosarroba == -1)       ):
-    print("Correo Valido")
-else:
-    print("correo no valido")
+# from math import trunc
+# print ("Introduzca su numero de DNI")
+# aux = input()
+# if(aux.isdigit() == False or len(aux) != 8):
+#     print("Se ha introducido mal el DNI")
+# else:
+#     numerodni = int(aux)
+#     resultado = (numerodni - (trunc(numerodni / 23) * 23 ))
+#     tabladni = "TRWAGMYFPDXBNJZSQVHLCKET"
+#     print("su letra es: " + tabladni[resultado])
 
-if((email.find("@")) != -1):
-    if((email.find(".")) != -1):
-        if(email.startswith("@") == False) and (email.startswith(".") == False) and (email.endswith(".") == False) and (email.endswith("@") == False) :
-            if(len(dominio) >= 2) and (len(dominio) < 5):
-                if(arroba != -1):
-                    print("el correo es invalido")
-                else:
-                    print("el correo es valido")
-            else:
-                print("el correo es invalido")
+
+
+# texto = input("Introduce un texto numerico: ")
+# suma = 0
+# for i in range(len(texto)):
+#     caracter = texto[i]
+#     caracter = int(caracter)
+#     suma = suma + caracter
+
+# print ("la suma es: " + str(suma))
+
+
+# isbn = input("Introduce un código ISBN: ")
+# multiplicacion = 0
+# suma = 0
+# if((len(isbn) != 10) or (isbn.isdigit() == False)):
+#     print("No se ha introducido bien el ISBN")
+# else:
+#     for i in range(len(isbn)):
+#         numero = int(isbn[i])
+#         posicion = i + 1
+#         multiplicacion = numero * posicion
+#         suma = suma + multiplicacion
+#     if(suma % 11 == 0 ):
+#         print("El ISBN es correcto!")
+#     else:
+#         print("algo ha salido mal")
+
+
+# def saludo(nombre):
+#     print("Bienvenido: " + nombre)
+# def despedida(nombre, fecha):
+#     print("Ha sido un placer " + nombre + ", hoy es: " + fecha)
+# print("Dinos tu nombre: ")
+# nombre = input()
+# print("Dinos el dia de la semana")
+# fecha = input()
+# saludo(nombre)
+# despedida(nombre, fecha)
+
+
+from metodosexternos import *    
+
+print("Introduce dos numeros por favor: ")
+numero1 = pedirnumero1()
+numero2 = pedirnumero2()
+valor = -1
+while(valor != 0):
+    valor = int(mostrarMenu())
+    if(valor == 1):
+        resultado = sumar(numero1, numero2)
+        print("El resultado es: " + str(resultado))
+        print("¿Quieres introducir nuevos numeros (s/n)?: ")
+        opcion = input()
+        if(opcion == "s"):
+            print("Introduce dos numeros por favor: ")
+            numero1 = pedirnumero1()
+            numero2 = pedirnumero2()
         else:
-            print("el correo es invalido")
+            print("continuará con los mismo numeros")
+    elif(valor == 2):
+        resultado = restar(numero1, numero2)
+        print("El resultado es: " + str(resultado))
+        print("¿Quieres introducir nuevos numeros (s/n)?: ")
+        opcion = input()
+        if(opcion == "s"):
+            print("Introduce dos numeros por favor: ")
+            numero1 = pedirnumero1()
+            numero2 = pedirnumero2()
+        else:
+            print("continuará con los mismo numeros")
+    elif(valor == 3):
+        resultado = multiplicar(numero1, numero2)
+        print("El resultado es: " + str(resultado))
+        print("¿Quieres introducir nuevos numeros (s/n)?: ")
+        opcion = input()
+        if(opcion == "s"):
+            print("Introduce dos numeros por favor: ")
+            numero1 = pedirnumero1()
+            numero2 = pedirnumero2()
+        else:
+            print("continuará con los mismo numeros")
+    elif(valor == 4):
+        resultado = dividir(numero1, numero2)
+        print("El resultado es: " + str(resultado))
+        print("¿Quieres introducir nuevos numeros (s/n)?: ")
+        opcion = input()
+        if(opcion == "s"):
+            print("Introduce dos numeros por favor: ")
+            numero1 = pedirnumero1()
+            numero2 = pedirnumero2()
+        else:
+            print("continuará con los mismo numeros")
     else:
-        print("el correo es invalido")
-else:
-    print("El email no es valido")
+        print("Saliendo del programa...")
