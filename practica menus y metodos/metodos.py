@@ -4,7 +4,7 @@ def mostrarMenu():
     print("| 0.- Salir                   |")
     print("| 1.- Bisiesto                |")
     print("| 2.- Narcisista              |")
-    print("| 2.- Bisiesto v2             |")
+    print("| 3.- Bisiesto v2             |")
     print("|-----------------------------|")
     opcion = input()
     return opcion
