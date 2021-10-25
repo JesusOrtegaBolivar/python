@@ -368,50 +368,115 @@
 
 
 
-opcion = "S"
-nombres = []
-def menu():
-    print("0.- Salir")
-    print("1.- Nuevo nombre")
-    print("2.- Eliminar nombre (posicion)")
-    print("3.- Comenzar de nuevo")
-    opcion = input()
-    return opcion
-def lista(): 
-    opcion = "S"   
-    while(opcion != "N"):
-        print("Introduce nombres")
-        nombres.append(input())
-        print("¿Quieres seguir introduciendo nombres?: S/N")
-        opcion = input()
+# opcion = "S"
+# nombres = []
+# def menu():
+#     print("0.- Salir")
+#     print("1.- Nuevo nombre")
+#     print("2.- Eliminar nombre (posicion)")
+#     print("3.- Comenzar de nuevo")
+#     opcion = input()
+#     return opcion
+# def lista(): 
+#     opcion = "S"   
+#     while(opcion != "N"):
+#         print("Introduce nombres")
+#         nombres.append(input())
+#         print("¿Quieres seguir introduciendo nombres?: S/N")
+#         opcion = input()
 
 
-lista()
-opcion = -1
+# lista()
+# opcion = -1
 
-while(opcion != 0):
-    opcion = int(menu())
-    if(opcion == 1):
-        print("Quien quieres introducir")
-        nombre = input()
-        nombres.append(nombre)
-        for i in range(len(nombres)):
-            name = nombres[i]
-            print(str([i]) + " .- " + name)
-    elif(opcion == 2):
-        for i in range(len(nombres)):
-            name = nombres[i]
-            print(str([i]) + " .- " + name)
-        print("A quien deseas eliminar")
-        eliminar = int(input())
-        nombres.pop(eliminar)
-        for i in range(len(nombres)):
-            name = nombres[i]
-            print(str([i]) + " .- " + name)
-    elif(opcion == 3):
-        nombres.clear()
-        lista()
-    else:
-        print("Ha ocurrido un problema")
+# while(opcion != 0):
+#     opcion = int(menu())
+#     if(opcion == 1):
+#         print("Quien quieres introducir")
+#         nombre = input()
+#         nombres.append(nombre)
+#         for i in range(len(nombres)):
+#             name = nombres[i]
+#             print(str([i]) + " .- " + name)
+#     elif(opcion == 2):
+#         for i in range(len(nombres)):
+#             name = nombres[i]
+#             print(str([i]) + " .- " + name)
+#         print("A quien deseas eliminar")
+#         eliminar = int(input())
+#         nombres.pop(eliminar)
+#         for i in range(len(nombres)):
+#             name = nombres[i]
+#             print(str([i]) + " .- " + name)
+#     elif(opcion == 3):
+#         nombres.clear()
+#         lista()
+#     else:
+#         print("Ha ocurrido un problema")
 
-print("el programa se cerrara")
+# print("el programa se cerrara")
+
+
+
+# #Ejemplo con file y listas
+# ciudades = ["Granada", "Sevilla", "Madrid", "Barcelona", "Santiago"]
+# contenido = "@".join(ciudades)
+# print(contenido)
+# cities = contenido.split(sep="@")
+# for ciudad in cities:
+#     print(ciudad)
+# try:
+#     ciudades = []
+#     def mostrarCiudades():
+#         for c in ciudades:
+#             print(c)
+
+#     def insertarCiudades():
+#         print("Introduzca una ciudad")
+#         ciudad = input()
+#         ciudades.append(ciudad)
+
+#     def guardarFile():
+#         contenido = "@".join(ciudades)
+#         file = open("ciudades.txt", "w+")
+#         file.write(contenido)
+#         file.flush()
+#         file.close()
+#         print("Datos almacenados")
+
+#     def leerFile():
+#         file = open("ciudades.txt", "r")
+#         contenido = file.read()
+#         file.close()
+#         ciudades = contenido.split(sep="@")
+#         print("Datos cargados")
+#         for ciudad in ciudades:
+#             print(ciudad)
+
+#     def menu():
+#         print("1.- Leer ciudades")
+#         print("2.- Guardar ciudades")
+#         print("3.- Nueva ciudad")
+#         print("4.- Mostrar ciudades")
+#         print("Selecciones una opcion")
+
+#     opcion = -1
+#     while(opcion != 0):
+#         menu()
+#         opcion = int(input())
+#         if(opcion == 1):
+#             leerFile()
+#         elif(opcion == 2):
+#             guardarFile()
+#         elif(opcion == 3):
+#             insertarCiudades()
+#         elif(opcion == 4):
+#             mostrarCiudades()
+#         elif(opcion == 0):
+#             print("Hasta luego")
+#         else:
+#             print("Ha ocurrido un error")
+# except FileNotFoundError:
+#     file = open("ciudades.txt", "w+")
+#     file.close()
+#     print("No hay datos que leer")
