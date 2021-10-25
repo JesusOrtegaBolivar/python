@@ -332,3 +332,86 @@
 #             print("continuará con los mismo numeros")
 #     else:
 #         print("Saliendo del programa...")
+
+
+
+# #Ejemplo de listas
+
+# nombres = ["Ana", "jesus", "pedro", "ana", "julia", "Ana"]
+# def mostrarNombres():
+#     for i in range(len(nombres)):
+#         name = nombres[i]
+#         print(str(i) + " .- " + name)
+
+# #Sacar un valor de una lista con el indice
+# numeros = [20,14,55,99,71]
+# print("Primer numero de la lista: " + str(numeros[0]))
+# #ordenar numeros
+# numeros.sort(reverse=True)
+# for num in numeros:
+#     print(num)
+
+# #añadir un nuevo nombre a la lista de nombres
+# nombres.append("El nuevo")
+# #Insertar un elemento en el medio
+# nombres.insert(2, "En el medio")
+# #Eliminaral elemento Ana
+# nombres.remove("Ana")
+# #Remove elimina el primer elemento que encuentra, pero por ello nos puede llevar a errores de logica
+# #Mejor Eliminar utilizando el indice
+# nombres.pop(5)
+# #Para borrar todo el contenido de la lista
+# nombres.clear()
+# mostrarNombres()
+
+
+
+
+
+opcion = "S"
+nombres = []
+def menu():
+    print("0.- Salir")
+    print("1.- Nuevo nombre")
+    print("2.- Eliminar nombre (posicion)")
+    print("3.- Comenzar de nuevo")
+    opcion = input()
+    return opcion
+def lista(): 
+    opcion = "S"   
+    while(opcion != "N"):
+        print("Introduce nombres")
+        nombres.append(input())
+        print("¿Quieres seguir introduciendo nombres?: S/N")
+        opcion = input()
+
+
+lista()
+opcion = -1
+
+while(opcion != 0):
+    opcion = int(menu())
+    if(opcion == 1):
+        print("Quien quieres introducir")
+        nombre = input()
+        nombres.append(nombre)
+        for i in range(len(nombres)):
+            name = nombres[i]
+            print(str([i]) + " .- " + name)
+    elif(opcion == 2):
+        for i in range(len(nombres)):
+            name = nombres[i]
+            print(str([i]) + " .- " + name)
+        print("A quien deseas eliminar")
+        eliminar = int(input())
+        nombres.pop(eliminar)
+        for i in range(len(nombres)):
+            name = nombres[i]
+            print(str([i]) + " .- " + name)
+    elif(opcion == 3):
+        nombres.clear()
+        lista()
+    else:
+        print("Ha ocurrido un problema")
+
+print("el programa se cerrara")
