@@ -42,16 +42,13 @@ def numeroMayorYmenor():
     buton = Button(ejercicio, text="Comprobar resultado", command=comprobar)
     buton.pack()
 
+
 def numerospares():
     ejercicio = Toplevel(root)
     ejercicio.title("Numeros pares")
     ejercicio.geometry("500x500")
     Label(ejercicio, text ="Este ejercicio consiste en un numero inicial y un numero final, para separarlos en pares e impares").pack()
     Label(ejercicio, text ="Introduce el numero inicial y final: ").pack()
-    scrollbar = Scrollbar(ejercicio)
-    scrollbar.config( command = ejercicio.yview )
-    scrollbar.pack( side = RIGHT, fill = Y )
-
     x1 = Entry(ejercicio, width=50)
     x1.pack()
     x2 = Entry(ejercicio, width=50)
