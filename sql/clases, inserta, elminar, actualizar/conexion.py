@@ -50,3 +50,18 @@ class ConexionHospital:
             departamento.localidad = row.loc
             cursor.close()
             return departamento
+    def todosDepartamentos(self):
+        cursor = self.conexion.cursor()
+        sqlselect = "select dept_no, dnombre, loc from dept"
+        cursor.execute(sqlselect)
+        #Creamos una lista para devolver los departamentos
+        departamentos = []
+        for row in cursor:
+            #creamos un departamento por cada fila del bucle
+            departamento = Departamento()
+            departamento.numero = row.dept_no
+            departamento.nombre = row.dnombre
+            departamento.localidad = row.loc
+            departamentos.append(departamento)
+        cursor.close()
+        return departamentos

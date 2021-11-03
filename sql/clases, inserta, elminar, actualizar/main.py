@@ -1,12 +1,13 @@
 from conexion import *
 respuesta = -1
 connection = ConexionHospital()
-while respuesta != 4:
+while respuesta != 6:
     print("1.- nuevo departamento")
     print("2.- Eliminar departamento")
     print("3.- Modificar departamento")
     print("4.- Buscar departamento")
-    print("5.- Salir")
+    print("5.- Todos departamento")
+    print("6.- Salir")
     respuesta = int(input())
     if (respuesta == 1):
         print("Introduce el numero de departamento")
@@ -40,6 +41,11 @@ while respuesta != 4:
         else:
             print(respuesta)
     elif(respuesta == 5):
+        print("Mostrando todos los departamentos")
+        respuesta = connection.todosDepartamentos()
+        for departamento in respuesta:
+            print(departamento)
+    elif(respuesta == 6):
         print("Saliendo")
     else:
         print("error")
