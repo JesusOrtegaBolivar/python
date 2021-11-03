@@ -42,3 +42,18 @@
 # sqldelete = "delete from enfermo where inscripcion = ?"
 # cursor.execute(sqldelete,(inscripcion))
 # cursor.commit()
+
+# #ahora lo mismo pero con clases
+# from conexionhospital import *
+# connection = ConexionHospital()
+# print("¿Que enfermo quieres eliminar?")
+# inscripcion = int(input())
+# respuesta = connection.eliminarEnfermo(inscripcion)
+# print("Resgristro eliminados: " + str(respuesta))
+# #A continuacion vamos a modificar el apellido de un enfermo
+# print("Modificar apellido de un enfermo. Introducir apellido e inscripcion")
+# apellido = input()
+# inscripcion = int(input())
+# respuesta = connection.modificarEnfermo(apellido, inscripcion)
+# print("Registros modificados: " + str(respuesta))
+
