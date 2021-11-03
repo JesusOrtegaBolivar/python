@@ -1,4 +1,5 @@
 import pyodbc
+from departamento import *
 servidor = "LOCALHOST\SQLEXPRESS"
 bbdd = "HOSPITAL"
 usuario = "SA"
@@ -33,3 +34,19 @@ class ConexionHospital:
         cursor.commit()
         cursor.close()
         return modify
+
+    def buscarDepartamento(self, numero):
+        cursor = self.conexion.cursor()
+        sqlselect = "select dept_no, dnombre, loc from dept where dept_no = ?"
+        cursor.execute(sqlselect, (numero))
+        row = cursor.fetchone()
+        if (not row):
+            cursor.close()
+            return None
+        else:
+            departamento = Departamento()
+            departamento.numero = row.dept_no
+            departamento.nombre = row.dnombre
+            departamento.localidad = row.loc
+            cursor.close()
+            return departamento

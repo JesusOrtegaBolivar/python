@@ -5,7 +5,8 @@ while respuesta != 4:
     print("1.- nuevo departamento")
     print("2.- Eliminar departamento")
     print("3.- Modificar departamento")
-    print("4.- Salir")
+    print("4.- Buscar departamento")
+    print("5.- Salir")
     respuesta = int(input())
     if (respuesta == 1):
         print("Introduce el numero de departamento")
@@ -31,6 +32,14 @@ while respuesta != 4:
         respuesta = connection.modificarDepartamento(numero, nombre, localidad)
         print("Departamento introducido: " + str(respuesta))
     elif(respuesta == 4):
-        print("Salir")
+        print("Introduce el numero de departamento que quieras buscar:")
+        numero = int(input())
+        respuesta = connection.buscarDepartamento(numero)
+        if (not respuesta):
+            print("No existe departamento")
+        else:
+            print(respuesta)
+    elif(respuesta == 5):
+        print("Saliendo")
     else:
         print("error")
